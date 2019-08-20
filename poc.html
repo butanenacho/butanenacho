@@ -2,14 +2,14 @@
 <html>
 <body>
 
-<p>Click the button</p>
-
-<button onclick="myFunction()">WoooW</button>
-
 <script>
-function myFunction() {
-  location.href = "https://login.flurry.com/verify?hash=FH7524MJX3V4Q2QJNZQXC6FQBKY2YW&userId=448133";
-}
+  function listener(event) {
+    alert(JSON.stringify(event.data));
+  }
+
+  var dest = window.open("https://accounts.pixiv.net/popup.html#https://booth.pm/users/sign_in");
+
+  window.addEventListener("message", listener);
 </script>
 
 </body>
