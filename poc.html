@@ -2,10 +2,10 @@
 <html>
 <body>
 <script>
-  function jsonp(token) {
-    alert(token)//The data variable will contain the JSON data.
-  }
+   leak = function (stuff) {
+   alert(JSON.stringify(stuff));
+   };  
 </script>
-<script src="https://demo.sjoerdlangkemper.nl/jsonp.php">
+<script src="https://demo.sjoerdlangkemper.nl/jsonp.php?callback=jsonp" type="text/javascript"></script>
 </body>
 </html>
