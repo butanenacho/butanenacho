@@ -1,0 +1,6 @@
+<html>
+<body>
+<h1>Testing</h1>
+<script>location.href="https://domgo.at/cxss/example/2"</script>
+</body>
+</html>
