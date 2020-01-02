@@ -8,7 +8,6 @@
 req.onload = reqListener; 
 req.open('get','https://www.facebook.com/x/oauth/status?client_id=2149688395347028&input_token&origin=1&redirect_uri=https%3A%2F%2Fbutanenacho.github.io%2Fsite%2F&sdk=joey&wants_cookie_data=true',true); 
 req.withCredentials = true;
-req.setRequestHeader("fb-s", "connected");
 req.send();
 
 function reqListener() {
