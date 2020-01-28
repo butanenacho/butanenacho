@@ -1,0 +1,8 @@
+<html>
+<body>
+function display(data){
+ alert(data)
+}
+<script src=http://ptl-9c49c3b2-ffdeb306.libcurl.so/secrets.js>
+</body>
+</html>
